@@ -7,10 +7,14 @@
     <i class="fas fa-plus"></i> Insertar
 </a>
 
-<div class="table-md">
-    <table class="table table-hover table-striped"> <!-- Cambié las clases de la tabla -->
-        <thead class="thead-dark"> <!-- Clase para el color negro en los <th> -->
-            <tr>
+<div
+class="table-responsive-md"
+>
+<table
+class="table  table-hover table-striped custom-table"
+>
+<thead class="table-dark ">
+    <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nombre Del Departamento</th>
                 <th scope="col">Nombre Mediano</th>

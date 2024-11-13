@@ -22,9 +22,9 @@ class="table  table-hover table-striped custom-table"
         <th scope="col">Id plaza</th>
         <th scope="col">Nombre</th>
         
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col">EDITAR</th>
+        <th scope="col">ELIMINAR</th>
+        <th scope="col">VER</th>
     </tr>
 </thead >
 <tbody>
