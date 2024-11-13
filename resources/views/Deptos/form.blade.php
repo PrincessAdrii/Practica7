@@ -13,16 +13,16 @@
 
 @section("contenido3")
 @if ($accion == 'C')
-<h1>INSERTANDO</h1> 
+<h1>Insertar</h1> 
   <form action="{{route('Deptos.store')}}" method="POST">
     
 
   @elseif ($accion == 'E')
-  <h1>EDITANDO FRM</h1> 
+  <h1>Editar</h1> 
   <form action="{{route('Deptos.update',$depto->idDepto)}}" method="POST"> 
 
     @elseif ($accion=='D')
-    <h1>PARA ELIMINAR</h1> 
+    <h1>Ver y Eliminar</h1> 
     <form action="{{route('Deptos.eliminar',$depto)}}" method="POST">
     
   @endif

@@ -18,14 +18,14 @@
    </li>
 @endforeach
 @if ($accion == 'C')
-<h1>insertar</h1> 
+<h1>Insertar</h1> 
   <form action="{{route('Plazas.store')}}" method="POST">
   @elseif ($accion == 'E')
-  <h1>Editar </h1> 
+  <h1>Editar</h1> 
   <form action="{{route('Plazas.update',$plaza->idPlaza)}}" method="POST">
 
     @elseif ($accion=='D')
-    <h1>PARA ELIMINAR</h1> 
+    <h1>Ver y Eliminar</h1> 
     <form action="{{route('Plazas.eliminar',$plaza)}}" method="POST">
     
   @endif

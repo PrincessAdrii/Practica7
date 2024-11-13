@@ -21,10 +21,10 @@
 <h1>insertar</h1> 
   <form action="{{ route('Puestos.store') }}" method="POST">
 @elseif ($accion == 'E')
-  <h1></h1> 
+  <h1>Editar</h1> 
   <form action="{{ route('Puestos.update', $puesto->idPuesto) }}" method="POST">
 @elseif ($accion == 'D')
-  <h1>PARA ELIMINAR</h1> 
+  <h1>Ver y Eliminar</h1> 
   <form action="{{ route('Puestos.eliminar', $puesto) }}" method="POST">
 @endif
 

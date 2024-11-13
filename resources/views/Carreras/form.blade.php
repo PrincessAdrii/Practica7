@@ -22,7 +22,7 @@
   <form action="{{route('Carreras.update',$carrera->idCarrera)}}" method="POST">
 
     @elseif ($accion=='D')
-    <h1>Eliminar</h1> 
+    <h1>Ver y Eliminar</h1> 
     <form action="{{route('Carreras.eliminar',$carrera)}}" method="POST">
     
   @endif

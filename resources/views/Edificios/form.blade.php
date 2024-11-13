@@ -30,7 +30,7 @@
   <form action="{{route('Edificios.update',$edificio->idEdificio)}}" method="POST">
 
     @elseif ($accion=='D')
-    <h1>Eliminar</h1> 
+    <h1>Ver y Eliminar</h1> 
     <form action="{{route('Edificios.eliminar',$edificio)}}" method="POST">
     
   @endif

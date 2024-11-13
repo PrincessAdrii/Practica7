@@ -14,15 +14,15 @@
 @section("contenido3")
 @if ($accion=='C')
 <form action="{{route('Materias.store')}}" method="POST">
-  <h1>Insertar form</h1>
+  <h1>Insertar</h1>
   @endif
   @if ($accion=='E')
   <form action="{{route('Materias.update',$materia->idMateria)}}" method="POST">
-    <h1>Actualizar</h1>
+    <h1>Editar</h1>
 @endif
 @if ($accion=='D')
 <form action="{{route('Materias.eliminar', $materia)}}" method="POST">
-  <h1>ver y eliminar</h1>
+  <h1>Ver y Eliminar</h1>
 @endif
 
 

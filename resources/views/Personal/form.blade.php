@@ -21,7 +21,7 @@
   <h1>Editar </h1> 
   <form action="{{ route('Personal.update', $personal->idPersonal) }}" method="POST">
 @elseif ($accion == 'D')
-  <h1> Eliminar</h1> 
+  <h1>Ver y Eliminar</h1> 
   <form action="{{ route('Personal.eliminar', $personal) }}" method="POST">
 @endif
 
