@@ -33,7 +33,7 @@
                     <td>{{ $lugar->edificio->nombreEdificio }}  </td>
                     
                     <td>
-                        <a href="{{ route('Lugares.editar', $lugar->idLugar) }}" class="btn btn-success">
+                        <a href="{{ route('Lugares.editar', $lugar->idLugar) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i> Editar
                         </a>
                     </td>

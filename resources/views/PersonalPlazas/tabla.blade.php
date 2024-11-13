@@ -38,7 +38,7 @@
                     <td>{{ $personalPlaza->plaza->nombrePlaza }}  </td>
                     <td>{{ $personalPlaza->tipoNombramiento }}</td>
                     <td>
-                        <a href="{{ route('PersonalPlazas.editar', $personalPlaza->idPersonalPlaza) }}" class="btn btn-success">
+                        <a href="{{ route('PersonalPlazas.editar', $personalPlaza->idPersonalPlaza) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i> Editar
                         </a>
                     </td>

@@ -42,7 +42,7 @@
                 <td>{{ $alumno->sexo }}</td>
                 <td>{{ $alumno->carrera->nombreCarrera ?? 'N/A' }}</td> 
                 <td>
-                    <a href="{{route('Alumnos.editar', $alumno->noctrl)}}" class="btn btn-success">
+                    <a href="{{route('Alumnos.editar', $alumno->noctrl)}}" class="btn btn-warning">
                         <i class="fas fa-edit"></i> Editar
                     </a>
                 </td>

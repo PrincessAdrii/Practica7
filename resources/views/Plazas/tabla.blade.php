@@ -34,7 +34,7 @@ class="table  table-hover table-striped custom-table"
                 <td scope="row">{{ $plaza->idPlaza }}  </td>
                 <td scope="row">{{ $plaza->nombrePlaza }}  </td>
                 <td>
-                    <a href="{{route('Plazas.editar',$plaza->idPlaza)}}" class="btn btn-success">
+                    <a href="{{route('Plazas.editar',$plaza->idPlaza)}}" class="btn btn-warning">
                         <i class="fas fa-edit"></i> Editar
                     </a>
                 </td>

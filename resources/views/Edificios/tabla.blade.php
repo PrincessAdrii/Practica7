@@ -37,7 +37,7 @@
                     <td>{{ $edificio->nombreEdificio }}  </td>
                     <td>{{ $edificio->nombreCorto }}</td>
                     <td>
-                        <a href="{{ route('Edificios.editar', $edificio->idEdificio) }}" class="btn btn-success">
+                        <a href="{{ route('Edificios.editar', $edificio->idEdificio) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i> Editar
                         </a>
                     </td>

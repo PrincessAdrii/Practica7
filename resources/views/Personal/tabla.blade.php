@@ -60,7 +60,7 @@
 
                    
                     <td>
-                        <a href="{{ route('Personal.editar', $personal->idPersonal) }}" class="btn btn-success">
+                        <a href="{{ route('Personal.editar', $personal->idPersonal) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i> Editar
                         </a>
                     </td>

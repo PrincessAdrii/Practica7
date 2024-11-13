@@ -32,7 +32,7 @@ class="table  table-hover table-striped custom-table"
                 <td>{{ $depto->nombreMediano }}</td>
                 <td>{{ $depto->nombreCorto }}</td>
                 <td>
-                    <a href="{{ route('Deptos.editar', $depto->idDepto) }}" class="btn btn-success">
+                    <a href="{{ route('Deptos.editar', $depto->idDepto) }}" class="btn btn-warning">
                         <i class="fas fa-edit"></i> Editar
                     </a>
                 </td>
