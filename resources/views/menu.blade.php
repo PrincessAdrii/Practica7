@@ -19,6 +19,11 @@
     </li>
     
     <li class="nav-item" role="presentation">
+        <a href="{{route('register')}}" class="nav-link">
+            <i class="fas fa-sign-in-alt"></i> Register
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
         <a href="{{route('login')}}" class="nav-link">
             <i class="fas fa-sign-in-alt"></i> Login
         </a>
