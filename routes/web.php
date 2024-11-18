@@ -14,6 +14,10 @@ use App\Http\Controllers\EdificioController;
 use App\Http\Controllers\LugarController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\PersonalPlazaController;
+use App\Http\Controllers\GrupoController;
+use App\Http\Controllers\GrupoHorarioController;
+use App\Http\Controllers\MateriasAbiertaController;
+
 
 
 
@@ -98,6 +102,10 @@ Route::get('/Alumnos2.index', [AlumnoController::class, 'index'])->name('Alumnos
     Route::post('/Materias.update/{materia}', [MateriaController::class, 'update'])->name('Materias.update');
 
 
+    Route::get('/MateriasA.index', [MateriasAbiertaController::class, 'index'])->name('MateriasA.index');
+    Route::post('/MateriasA.store', [MateriasAbiertaController::class, 'store'])->name('MateriasA.store');
+
+
 
 
     Route::get('/Edificios.index', [EdificioController::class, 'index'])->name('Edificios.index');    
@@ -134,6 +142,17 @@ Route::get('/Alumnos2.index', [AlumnoController::class, 'index'])->name('Alumnos
     Route::get('/PersonalPlazas.ver/{personalPlaza}', [PersonalPlazaController::class, 'show'])->name('PersonalPlazas.ver');       
     Route::post('/PersonalPlazas.eliminar/{personalPlaza}', [PersonalPlazaController::class, 'destroy'])->name('PersonalPlazas.eliminar');
     Route::post('/PersonalPlazas.update/{personalPlaza}', [PersonalPlazaController::class, 'update'])->name('PersonalPlazas.update');
+    
+
+    Route::get('/Grupos.index', [GrupoController::class, 'index'])->name('Grupo.index');    
+    Route::get('/Grupos.create', [GrupoController::class, 'create'])->name('Grupo.create');
+    Route::post('/Grupos.store', [GrupoController::class, 'store'])->name('Grupo.store');       
+    Route::get('/Grupos.ediar/{personal}', [GrupoController::class, 'edit'])->name('Grupo.editar');      
+    Route::get('/Grupos.ver/{personal}', [GrupoController::class, 'show'])->name('Grupo.ver');     
+    Route::post('/Grupos.eliminar/{personal}', [GrupoController::class, 'destroy'])->name('Grupo.eliminar');
+    Route::post('/Grupos.update/{personal}', [GrupoController::class, 'update'])->name('Grupo.update');
+    Route::resource('/Grupo.index', GrupoController::class);
+
     
 
     Route::get('/', function () {

@@ -15,14 +15,6 @@ class GrupoFactory extends Factory
     public function definition(): array
     {
       
-        $horaInicio = $this->faker->time('H:00:00');
-        $horaFin = date('H:i:s', strtotime($horaInicio) + 3600); 
-
-        return [
-            'idHora' => $this->faker->unique()->bothify('####'),
-            'horaIni' => $horaInicio,
-            'horaFin' => $horaFin,
-        ];
-
+      
     }
 }

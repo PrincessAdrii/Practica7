@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Periodo;
+use App\Models\Carrera;
 use Illuminate\Http\Request;
 
 class PeriodoController extends Controller
@@ -23,7 +24,8 @@ class PeriodoController extends Controller
     public function index()
     {
         $periodos= Periodo::paginate(5);
-        return view("Periodos/index",compact("periodos"));
+        $carreras= Carrera::all();
+        return view("Periodos/index",compact("periodos","carreras"));
 
     }
 

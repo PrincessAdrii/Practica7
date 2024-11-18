@@ -38,33 +38,25 @@
 
     </style>
 </head>
-<body>
-    <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            
-            @include("menu")
-          </div>
-          </div>
+<body> 
+  @include("menu")
+   
 
           <div class="content">
           <div class="row">
             <div class="col-12">
              
               @yield("contenido1")
-              @empty($__env->yieldContent('contenido1'))
+              <!-- @empty($__env->yieldContent('contenido1'))
               <p class="center-text">BIENVENIDOS A MI PAGINA</p>
-          @endempty
+          @endempty -->
             
          </div>
         </div>
       </div>
-      <div class="row">
-              <div class="col-12 p-4">
-                <footer>
+      
+            <footer>
                   @yield("footer")
                 </footer>
-              </div>
-            </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 @section("contenido1")
 
-@include("Periodos/tabla")
+@include("Grupos/tabla")
    
    @endsection
    

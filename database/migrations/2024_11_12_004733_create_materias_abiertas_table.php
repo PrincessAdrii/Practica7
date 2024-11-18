@@ -12,15 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('materias_abiertas', function (Blueprint $table) {
-            $table->id('idMateriaAbierta');
-            $table->string('idMateria');
-            $table->string('idPeriodo');
+            $table->id();
 
+            $table->string('idPeriodo',15);
+            $table->foreign('idPeriodo')->references('idPeriodo')->on('periodos')->onUpdate('cascade');
+
+            $table->string('idMateria',15);
+            $table->foreign('idMateria')->references('idMateria')->on('materias')->onUpdate('cascade');
+
+            $table->string('idCarrera',15);
+            $table->foreign('idCarrera')->references('idCarrera')->on('carreras')->onUpdate('cascade');
+
+           
             
             $table->timestamps();
-
-            $table->foreign('idMateria')->references('idMateria')->on('materias');
-            $table->foreign('idPeriodo')->references('idPeriodo')->on('periodos'); 
         });
     }
 

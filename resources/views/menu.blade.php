@@ -1,5 +1,5 @@
 @guest
-<ul class="nav nav-pills nav-fill bg-dark shadow-sm p-3 mb-5 rounded" id="navId" role="tablist">
+<ul class="nav nav-pills nav-fill bg-dark shadow-sm p-3 mb-5" id="navId" role="tablist">
     {{-- guest estas como invitado --}}
     {{-- si no esta autentificado --}}
     <li class="nav-item" role="presentation">
@@ -43,7 +43,7 @@
 <!-- Nav tabs -->
 
 
-<ul class="nav nav-pills nav-fill bg-dark shadow-sm p-3 mb-5 rounded" id="navId" role="tablist">
+<ul class="nav nav-pills nav-fill bg-dark shadow-sm p-3 mb-5 " id="navId" role="tablist">
  
 <li class="nav-item" role="presentation">
          <!-- Catálogo Dropdown -->
@@ -60,10 +60,12 @@
           <li><a class="dropdown-item" href="{{route('Carreras.index')}}">Carreras</a></li>
           <li><a class="dropdown-item" href="{{route('Reticulas.index')}}">Retículas</a></li>
           <li><a class="dropdown-item" href="{{route('Materias.index')}}">Materias</a></li>
+          <li><a class="dropdown-item" href="{{route('MateriasA.index')}}">Materias Abiertas</a></li>
           <li><a class="dropdown-item" href="{{route('Edificios.index')}}">Edificios</a></li>
           <li><a class="dropdown-item" href="{{route('Lugares.index')}}">Lugares</a></li>
           <li><a class="dropdown-item" href="{{route('Personal.index')}}">Personal</a></li>
           <li><a class="dropdown-item" href="{{route('PersonalPlazas.index')}}">PersonalPlaza</a></li>
+          <li><a class="dropdown-item" href="{{route('Grupo.index')}}">Grupo</a></li>
           
         </ul>
       </div>

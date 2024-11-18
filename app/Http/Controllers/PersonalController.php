@@ -35,14 +35,14 @@ class PersonalController extends Controller
 
     public function index()
     {
-        $personales = Personal::paginate(5);
+        $personales = Personal::paginate(2);
         return view('Personal.index', compact('personales'));
     }
 
     
     public function create()
     {
-        $personales= Personal::paginate(5); 
+        $personales= Personal::paginate(2); 
         $personal=new Personal;
         $deptos=Depto::all();
         $puestos=Puesto::all();
@@ -66,7 +66,7 @@ class PersonalController extends Controller
     
     public function show(Personal $personal)
     {
-        $personales=Personal::Paginate(5);
+        $personales=Personal::Paginate(2);
         $accion='D';
         $txtbtn='confirmar la eliminacion';
         $deptos = Depto::all();
@@ -82,7 +82,7 @@ class PersonalController extends Controller
        
         $deptos = Depto::all();
         $puestos = Puesto::all();
-        $personales = Personal::paginate(5); 
+        $personales = Personal::paginate(2); 
          
         $accion = 'E';
         $txtbtn = 'actualizar';

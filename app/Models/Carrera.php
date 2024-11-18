@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Materia;
+use App\Models\Reticula;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -29,4 +30,9 @@ class Carrera extends Model
    protected $primaryKey= 'idCarrera'; 
    protected $casts = ['idCarrera'=>'string']; 
    public $incrementing = false; //
+
+   public function reticulas(): HasMany
+{
+    return $this->hasMany(Reticula::class, 'idCarrera');
+}
 }

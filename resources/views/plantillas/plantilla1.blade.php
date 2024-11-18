@@ -29,7 +29,7 @@
           background-color: #030000;
           text-align: center;
           padding: 10px;
-          margin-top: auto;
+          margin-top: 70px;
           width: 100%;
           color: white;
           height: 200px;
@@ -39,32 +39,24 @@
     </style>
 </head>
 <body>
-    <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            
-            @include("menu")
-          </div>
-          </div>
+
+@include("menu")
+    
 
           <div class="content">
           <div class="row">
-            <div class="col-12">
+            <div class="col">
              
               @yield("contenido1")
-              @empty($__env->yieldContent('contenido1'))
-              <p class="center-text">BIENVENIDOS A MI PAGINA</p>
-          @endempty
+              
             
          </div>
         </div>
       </div>
-      <div class="row">
-              <div class="col-12 p-4">
-                <footer>
+ 
+
+            <footer>
                   @yield("footer")
                 </footer>
-              </div>
-            </div>
 </body>
 </html>
