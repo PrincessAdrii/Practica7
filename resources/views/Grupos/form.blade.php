@@ -494,20 +494,20 @@ function toggleHorario() {
         toggleButton.type = "submit"; // Cambiar tipo a submit para enviar el formulario
 
         // Deshabilitar los campos no relacionados con el horario
-        document.getElementById("grupo").disabled = true;
-        document.querySelectorAll('input[name="fecha"]').forEach((date) => date.disabled = true);
-        document.getElementById("descripcion").disabled = true;
-        document.getElementById("maxAlumnos").disabled = true;
-        document.getElementById("idPeriodo").disabled = true;
-        document.getElementById("idCarrera").disabled = true;
+        document.getElementById("grupo").readOnly = true;
+        document.querySelectorAll('input[name="fecha"]').forEach((date) => date.readOnly = true);
+        document.getElementById("descripcion").readOnly = true;
+        document.getElementById("maxAlumnos").readOnly = true;
+        document.getElementById("idPeriodo").readOnly = true;
+        document.getElementById("idCarrera").readOnly = true;
         document.getElementById("departamento").disabled = true;
         document.getElementById("semestre").disabled = true;
-        document.querySelectorAll('input[name="idMateria"]').forEach((radio) => radio.disabled = true);
-        document.querySelectorAll('input[name="idPersonal"]').forEach((radio) => radio.disabled = true);
+        document.querySelectorAll('input[name="idMateria"]').forEach((radio) => radio.readOnly = true);
+        document.querySelectorAll('input[name="idPersonal"]').forEach((radio) => radio.readOnly = true);
         // Habilitar los campos de horario y lugar
         document.getElementById("edificio").disabled = false;
-        document.querySelectorAll('input[name="idLugar"]').forEach((radio) => radio.disabled = false);
-        document.querySelectorAll('input[name="horarios[]"]').forEach((checkbox) => checkbox.disabled = false);
+        document.querySelectorAll('input[name="idLugar"]').forEach((radio) => radio.readOnly = false);
+        document.querySelectorAll('input[name="horarios[]"]').forEach((checkbox) => checkbox.readOnly = false);
     } else {
         // Si el botón es "Terminar Horario", enviar el formulario
         if (toggleButton.textContent === "Terminar Horario") {
@@ -522,19 +522,19 @@ function toggleHorario() {
             edificioYHorario.style.display = "none";
 
             // Reactivar los campos originales de grupo
-            document.getElementById("grupo").disabled = false;
-            document.getElementById("fecha").disabled = false;
-            document.getElementById("descripcion").disabled = false;
-            document.getElementById("maxAlumnos").disabled = false;
-            document.getElementById("idPeriodo").disabled = false;
+            document.getElementById("grupo").readOnly = false;
+            document.getElementById("fecha").readOnly = false;
+            document.getElementById("descripcion").readOnly = false;
+            document.getElementById("maxAlumnos").readOnly = false;
+            document.getElementById("idPeriodo").readOnly = false;
             document.getElementById("idCarrera").readOnly = false;
-            document.getElementById("departamento").disabled = false;
-            document.getElementById("semestre").disabled = false;
+            document.getElementById("departamento").readOnly = false;
+            document.getElementById("semestre").readOnly = false;
 
             // Deshabilitar los campos de horario
             document.getElementById("edificio").disabled = true;
-            document.querySelectorAll('input[name="idLugar"]').forEach((radio) => radio.disabled = true);
-            document.querySelectorAll('input[name="horarios[]"]').forEach((checkbox) => checkbox.disabled = true);
+            document.querySelectorAll('input[name="idLugar"]').forEach((radio) => radio.readOnly = true);
+            document.querySelectorAll('input[name="horarios[]"]').forEach((checkbox) => checkbox.readOnly = true);
         }
     }
 }
