@@ -1,4 +1,4 @@
-@extends("plantillas/plantilla1")
+@extends("plantillas/plantilla2")
 
   
 

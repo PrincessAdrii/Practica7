@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Models;
+use App\Models\Grupo;
+use App\Models\Lugar;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class GrupoHorario extends Model
 {
@@ -23,4 +28,14 @@ class GrupoHorario extends Model
         
         
     ];
+
+    public function lugar(): BelongsTo
+    {
+        return $this->belongsTo(Lugar::class, 'idLugar');
+    }
+    public function grupo(): BelongsTo
+    {
+        return $this->belongsTo(Grupo::class, 'idGrupo');
+    }
+  
 }

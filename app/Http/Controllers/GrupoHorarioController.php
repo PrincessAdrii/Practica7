@@ -50,12 +50,13 @@ class GrupoHorarioController extends Controller
         $lugares=Lugar::all();
         $edificios=Edificio::all();
         $deptos=Depto::all();
+        $horarios=GrupoHorario::all();
 
         $accion='C';
         $txtbtn='Guardar';
         $des='';
 
-        return view("/Grupos.form", compact("accion",'txtbtn','des', 'periodos','materias','carreras','personales',
+        return view("/Grupos.index", compact("accion",'txtbtn','des', 'periodos','materias','carreras','personales',
     'lugares','deptos','edificios','grupos'));
     }
 

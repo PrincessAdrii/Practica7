@@ -42,12 +42,13 @@ class GrupoController extends Controller
         $lugares=Lugar::all();
         $edificios=Edificio::all();
         $deptos=Depto::all();
+        $horarios=GrupoHorario::all();
 
         $accion='C';
         $txtbtn='Guardar';
         $des='';
-        return view("Grupos/form",compact("grupos",'grupo',"accion",'txtbtn','des', 'periodos','materias','carreras','personales',
-    'lugares','deptos','edificios'));
+        return view("Grupos/index",compact("grupos",'grupo',"accion",'txtbtn','des', 'periodos','materias','carreras','personales',
+    'lugares','deptos','edificios', 'horarios'));
     }
 
     /**
@@ -65,12 +66,12 @@ class GrupoController extends Controller
         $lugares=Lugar::all();
         $edificios=Edificio::all();
         $deptos=Depto::all();
-
+        $horarios=GrupoHorario::all();
         $accion='C';
         $txtbtn='Guardar';
         $des='';
         return view("Grupos/form",compact("grupos",'grupo',"accion",'txtbtn','des', 'periodos','materias','carreras','personales',
-    'lugares','deptos','edificios'));
+    'lugares','deptos','edificios','horarios'));
     }
 
     /**
@@ -146,7 +147,7 @@ class GrupoController extends Controller
     }
 
     // Redirigir con un mensaje de éxito y pasar los datos del grupo para el formulario
-    return back()->with('success', $message)->with('grupo', $grupo);
+    return back()->with('success', true)->with('grupo', $grupo);
 }
 
 
