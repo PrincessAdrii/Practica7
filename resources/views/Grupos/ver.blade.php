@@ -35,7 +35,7 @@
           <input type="email" class="form-control" id="nombre" name="email" disabled value="{{$alumno->email}}">
         </div>
       </div>
-
+  
     
 
 
