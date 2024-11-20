@@ -51,14 +51,18 @@
                 </div>
             </div>
 
-       
+         <div class="content">
+          <div class="row">
+            <div class="col-12">
              
               @yield("contenido1")
               <!-- @empty($__env->yieldContent('contenido1'))
               <p class="center-text">BIENVENIDOS A MI PAGINA</p>
           @endempty -->
             
-        
+         </div>
+        </div>
+      </div>
 
         <div class="row">
             <div class="col">
