@@ -147,7 +147,7 @@ class GrupoController extends Controller
     }
 
     // Redirigir con un mensaje de éxito y pasar los datos del grupo para el formulario
-    return back()->with('success', true)->with('grupo', $grupo);
+    return redirect()->route('Grupo.index')->with("mensaje",'se inserto correctamente.');
 }
 
 
